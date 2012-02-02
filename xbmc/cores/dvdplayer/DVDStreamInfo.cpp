@@ -185,6 +185,7 @@ void CDVDStreamInfo::Assign(const CDemuxStream& right, bool withextradata)
     blockalign    = stream->iBlockAlign;
     bitrate       = stream->iBitRate;
     bitspersample = stream->iBitsPerSample;
+    profile       = stream->profile;
   }
   else if(  right.type == STREAM_VIDEO )
   {
