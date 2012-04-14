@@ -2828,6 +2828,13 @@ typedef struct AVCodecContext {
      * - encoding: unused
      */
     AVPacket *pkt;
+
+    /**
+     * Requests that only forced subpictures be decoded.
+     * - decoding: set by user
+     * - encoding: unused
+     */
+    int forced_subs_only;
 } AVCodecContext;
 
 /**
