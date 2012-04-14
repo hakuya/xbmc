@@ -3054,6 +3054,8 @@ typedef struct AVSubtitleRect {
      * struct.
      */
     char *ass;
+
+    int forced;     ///< 1 if this subtitle should be displayed when subs disabled
 } AVSubtitleRect;
 
 typedef struct AVSubtitle {
