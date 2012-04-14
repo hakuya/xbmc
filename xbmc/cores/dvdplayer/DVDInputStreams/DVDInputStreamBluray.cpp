@@ -301,6 +301,8 @@ bool CDVDInputStreamBluray::Open(const char* strFile, const std::string& content
         break;
       }
 
+      m_title = NULL;
+      
       BLURAY_TITLE_INFO *t;
       for(int i=0; i < titles; i++)
       {
@@ -318,7 +320,6 @@ bool CDVDInputStreamBluray::Open(const char* strFile, const std::string& content
         m_dll->bd_free_title_info(t);
       }
 
-      m_title = NULL;
       break;
 
     } while(false);
